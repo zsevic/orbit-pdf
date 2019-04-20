@@ -1,0 +1,57 @@
+{
+  "name": "orbit-pdf",
+  "version": "1.0.0",
+  "description": "CLI tool for converting Orbit html resume to pdf",
+  "author": "Željko Šević",
+  "bin": {
+    "orbit-pdf": "./bin/run"
+  },
+  "bugs": "https://github.com/zsevic/orbit-pdf/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "chalk": "^2.4.2",
+    "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^8",
+    "mocha": "^5",
+    "nyc": "^13"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/zsevic/orbit-pdf",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "orbit-pdf",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "zsevic/orbit-pdf",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint --fix --ignore-path .eslintignore .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --reporter=html mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
