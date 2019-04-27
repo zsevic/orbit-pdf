@@ -1,3 +1,6 @@
 {
-  "extends": "oclif"
+  "env": {
+    "mocha": true
+  },
+  "extends": "standard"
 }

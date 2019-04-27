@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/npm/l/orbit-pdf.svg)](https://github.com/zsevic/orbit-pdf/blob/master/package.json)
 
 <!-- toc -->
+* [orbit-pdf](#orbit-pdf)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -18,7 +19,7 @@ $ npm install -g orbit-pdf
 $ orbit-pdf COMMAND
 running command...
 $ orbit-pdf (-v|--version|version)
-orbit-pdf/1.0.0 linux-x64 node-v10.10.0
+orbit-pdf/1.0.1 linux-x64 node-v10.10.0
 $ orbit-pdf --help [COMMAND]
 USAGE
   $ orbit-pdf COMMAND
@@ -48,7 +49,7 @@ DESCRIPTION
   Converts html resume to pdf and downloads it
 ```
 
-_See code: [src/commands/convert.js](https://github.com/zsevic/orbit-pdf/blob/v1.0.0/src/commands/convert.js)_
+_See code: [src/commands/convert.js](https://github.com/zsevic/orbit-pdf/blob/v1.0.1/src/commands/convert.js)_
 
 ## `orbit-pdf help [COMMAND]`
 
