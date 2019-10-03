@@ -19,7 +19,7 @@ $ npm install -g orbit-pdf
 $ orbit-pdf COMMAND
 running command...
 $ orbit-pdf (-v|--version|version)
-orbit-pdf/1.0.1 linux-x64 node-v10.10.0
+orbit-pdf/1.0.1 linux-x64 node-v12.10.0
 $ orbit-pdf --help [COMMAND]
 USAGE
   $ orbit-pdf COMMAND
