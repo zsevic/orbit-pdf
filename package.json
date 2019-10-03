@@ -54,10 +54,14 @@
   },
   "repository": "zsevic/orbit-pdf",
   "scripts": {
+    "deploy": "npm publish",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint --fix --ignore-path .eslintignore .",
     "prepack": "oclif-dev manifest && oclif-dev readme",
     "test": "nyc --reporter=html mocha --forbid-only \"test/**/*.test.js\"",
     "version": "oclif-dev readme && git add README.md"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@zsevic"
   }
 }
