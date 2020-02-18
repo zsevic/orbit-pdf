@@ -15,7 +15,7 @@ describe('convert', () => {
     .command([
       'convert',
       '--url',
-      'https://sevic.me/resume',
+      'https://sevic.dev/resume',
       '--path',
       'ZeljkoSevicCV.pdf',
       '--lastPage',
@@ -29,7 +29,7 @@ describe('convert', () => {
 
   test
     .stdout()
-    .command(['convert', '--url', 'https://sevic.me/resume'])
+    .command(['convert', '--url', 'https://sevic.dev/resume'])
     .it('runs convert', ctx => {
       expect(ctx.stdout).to.contain(
         'Resume is successfully converted and downloaded'

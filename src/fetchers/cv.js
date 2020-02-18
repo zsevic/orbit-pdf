@@ -13,7 +13,7 @@ async function fetchCv ({ url, path, lastPage }) {
     args: ['--no-sandbox']
   })
   const page = await browser.newPage()
-  await page.goto(url || 'https://sevic.me/resume').catch(() => {
+  await page.goto(url || 'https://sevic.dev/resume').catch(() => {
     throw new Error(chalk.red('Url is not valid'))
   })
 
