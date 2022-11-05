@@ -19,7 +19,7 @@ $ npm install -g @zsevic/orbit-pdf
 $ orbit-pdf COMMAND
 running command...
 $ orbit-pdf (-v|--version|version)
-@zsevic/orbit-pdf/1.0.0 linux-x64 node-v15.10.0
+@zsevic/orbit-pdf/1.1.0 linux-x64 node-v17.9.1
 $ orbit-pdf --help [COMMAND]
 USAGE
   $ orbit-pdf COMMAND
@@ -40,8 +40,10 @@ USAGE
   $ orbit-pdf convert
 
 OPTIONS
+  -f, --format=format      format, example: A3
   -l, --lastPage=lastPage  last page to print
   -p, --path=path          path for downloaded pdf resume
+  -s, --scale=scale        scale, example: 1
   -u, --url=url            html resume url
 
 DESCRIPTION
