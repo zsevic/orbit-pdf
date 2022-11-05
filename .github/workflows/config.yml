@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      - run: npm audit
+      - run: npm audit --audit-level=critical
 
   publish:
     needs: lint-test-audit
