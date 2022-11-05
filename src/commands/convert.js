@@ -29,6 +29,14 @@ ConvertCommand.flags = {
     char: 'l',
     description: 'last page to print',
   }),
+  format: flags.string({
+    char: 'f',
+    description: 'format, example: A3',
+  }),
+  scale: flags.string({
+    char: 's',
+    description: 'scale, example: 1',
+  }),
 }
 
 module.exports = ConvertCommand
