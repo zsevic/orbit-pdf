@@ -61,6 +61,6 @@
     "publish-npm": "npm publish --access public --ignore-scripts --@zsevic:registry='https://registry.npmjs.org'",
     "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
     "posttest": "npm run lint -- --fix",
-    "version": "oclif-dev readme && git add README.md"
+    "update-readme": "oclif-dev readme && git add README.md"
   }
 }

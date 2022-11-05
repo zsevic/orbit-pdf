@@ -17,15 +17,9 @@ CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resu
 ```sh-session
 $ npx @zsevic/orbit-pdf COMMAND
 running command...
-<<<<<<< HEAD
-$ orbit-pdf (-v|--version|version)
-@zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
-$ orbit-pdf --help [COMMAND]
-=======
 $ npx @zsevic/orbit-pdf (-v|--version|version)
 @zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
 $ npx @zsevic/orbit-pdf --help [COMMAND]
->>>>>>> readme
 USAGE
   $ npx @zsevic/orbit-pdf COMMAND
 ...
