@@ -11,7 +11,7 @@ async function fetchResume({url, path, lastPage, format, scale}) {
     throw new Error('Last page is not valid')
   }
 
-  const scaleParameter = Number(scale);
+  const scaleParameter = Number(scale)
   if ((scale && Number.isNaN(scaleParameter)) || (!Number.isNaN(scaleParameter) && scaleParameter <= 0)) {
     throw new Error('Scale is not valid')
   }
