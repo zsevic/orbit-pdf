@@ -15,7 +15,7 @@ async function fetchResume({url, path, lastPage, format, scale}) {
   await page.pdf({
     path: path || 'ZeljkoSevicCV.pdf',
     format: format || 'A3',
-    scale: scale || 1,
+    scale: scale ? Number.parseFloat(scale) : 1,
     pageRanges: `1-${lastPage || 1}`,
     printBackground: true,
   })
