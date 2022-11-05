@@ -1,21 +1,7 @@
 const chalk = require('chalk')
 const puppeteer = require('puppeteer')
-const validator = require('validator')
 
 async function fetchResume({url, path, lastPage, format, scale}) {
-  if (url && !validator.isURL(url)) {
-    throw new Error('Url is not valid')
-  }
-
-  if (lastPage && isNaN(lastPage)) {
-    throw new Error('Last page is not valid')
-  }
-
-  const scaleParameter = Number(scale)
-  if ((scale && Number.isNaN(scaleParameter)) || (!Number.isNaN(scaleParameter) && scaleParameter <= 0)) {
-    throw new Error('Scale is not valid')
-  }
-
   const browser = await puppeteer.launch({
     args: ['--no-sandbox'],
   })
@@ -29,7 +15,7 @@ async function fetchResume({url, path, lastPage, format, scale}) {
   await page.pdf({
     path: path || 'ZeljkoSevicCV.pdf',
     format: format || 'A3',
-    scale: scaleParameter || 1,
+    scale: scale || 1,
     pageRanges: `1-${lastPage || 1}`,
     printBackground: true,
   })

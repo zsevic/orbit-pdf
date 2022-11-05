@@ -54,6 +54,13 @@ describe('Convert command', () => {
 
   test
   .stdout()
+  .command(['convert', '--scale', '-1'])
+  .it('should throw an error when scale argument is not valid', ctx => {
+    expect(ctx.stdout).to.contain('Scale is not valid')
+  })
+
+  test
+  .stdout()
   .command(['convert', '--url', 'test'])
   .it('should throw an error when url argument is not valid', ctx => {
     expect(ctx.stdout).to.contain('Url is not valid')
