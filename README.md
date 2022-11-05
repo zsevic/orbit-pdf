@@ -4,7 +4,7 @@
 CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resume to pdf
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/@zsevic/orbit-pdf.svg)](https://npmjs.org/package/orbit-pdf)
+[![Version](https://img.shields.io/npm/v/@zsevic/orbit-pdf.svg)](https://npmjs.org/package/@zsevic/orbit-pdf)
 [![Downloads/week](https://img.shields.io/npm/dw/@zsevic/orbit-pdf.svg)](https://www.npmjs.com/package/@zsevic/orbit-pdf)
 [![License](https://img.shields.io/npm/l/@zsevic/orbit-pdf.svg)](https://github.com/zsevic/orbit-pdf/blob/master/package.json)
 
@@ -18,7 +18,7 @@ CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resu
 $ npx @zsevic/orbit-pdf COMMAND
 running command...
 $ npx @zsevic/orbit-pdf (-v|--version|version)
-@zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
+@zsevic/orbit-pdf/1.1.5 linux-x64 node-v17.9.1
 $ npx @zsevic/orbit-pdf --help [COMMAND]
 USAGE
   $ npx @zsevic/orbit-pdf COMMAND
