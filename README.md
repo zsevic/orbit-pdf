@@ -1,11 +1,11 @@
-orbit-pdf
+@zsevic/orbit-pdf
 =========
 
 CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resume to pdf
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@zsevic/orbit-pdf.svg)](https://npmjs.org/package/orbit-pdf)
-[![Downloads/week](https://img.shields.io/npm/dw/@zsevic/orbit-pdf.svg)](https://npmjs.org/package/orbit-pdf)
+[![Downloads/week](https://img.shields.io/npm/dw/@zsevic/orbit-pdf.svg)](https://www.npmjs.com/package/@zsevic/orbit-pdf)
 [![License](https://img.shields.io/npm/l/@zsevic/orbit-pdf.svg)](https://github.com/zsevic/orbit-pdf/blob/master/package.json)
 
 <!-- toc -->
@@ -19,7 +19,7 @@ $ npm install -g @zsevic/orbit-pdf
 $ orbit-pdf COMMAND
 running command...
 $ orbit-pdf (-v|--version|version)
-@zsevic/orbit-pdf/1.1.0 linux-x64 node-v17.9.1
+@zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
 $ orbit-pdf --help [COMMAND]
 USAGE
   $ orbit-pdf COMMAND
