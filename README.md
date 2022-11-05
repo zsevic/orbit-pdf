@@ -15,21 +15,26 @@ CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resu
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @zsevic/orbit-pdf
-$ orbit-pdf COMMAND
+$ npx @zsevic/orbit-pdf COMMAND
 running command...
+<<<<<<< HEAD
 $ orbit-pdf (-v|--version|version)
 @zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
 $ orbit-pdf --help [COMMAND]
+=======
+$ npx @zsevic/orbit-pdf (-v|--version|version)
+@zsevic/orbit-pdf/1.1.3 linux-x64 node-v17.9.1
+$ npx @zsevic/orbit-pdf --help [COMMAND]
+>>>>>>> readme
 USAGE
-  $ orbit-pdf COMMAND
+  $ npx @zsevic/orbit-pdf COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`orbit-pdf convert`](#orbit-pdf-convert)
-* [`orbit-pdf help [COMMAND]`](#orbit-pdf-help-command)
+* [`npx @zsevic/orbit-pdf convert`](#orbit-pdf-convert)
+* [`npx @zsevic/orbit-pdf help [COMMAND]`](#orbit-pdf-help-command)
 
 ## `orbit-pdf convert`
 
@@ -37,7 +42,7 @@ Converts html resume to pdf
 
 ```
 USAGE
-  $ orbit-pdf convert
+  $ npx @zsevic/orbit-pdf convert
 
 OPTIONS
   -f, --format=format      format, example: A3
@@ -53,11 +58,11 @@ DESCRIPTION
 
 ## `orbit-pdf help [COMMAND]`
 
-display help for orbit-pdf
+display help for @zsevic/orbit-pdf
 
 ```
 USAGE
-  $ orbit-pdf help [COMMAND]
+  $ npx @zsevic/orbit-pdf help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
