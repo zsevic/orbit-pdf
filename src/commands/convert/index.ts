@@ -1,5 +1,4 @@
 import {Command, Flags} from '@oclif/core'
-import chalk from 'chalk'
 import validator from 'validator'
 
 import { CliFlags } from '../../flags'
@@ -36,9 +35,9 @@ export default class ConvertCommand extends Command {
     try {
       this.validateFlags(flags)
       const result = await fetchResume(flags)
-      this.log(chalk.green(result))
+      this.log(result)
     } catch (error) {
-      this.log(chalk.red(error instanceof Error ? error.message : `Unexpected error ${error}`))
+      this.log(error instanceof Error ? error.message : `Unexpected error ${error}`)
     }
   }
 

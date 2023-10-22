@@ -1,15 +1,6 @@
-const {expect, test} = require('@oclif/test')
-const mock = require('mock-require')
+import {expect, test} from '@oclif/test'
 
 describe('Convert command', () => {
-  before(() => {
-    mock('../../src/services/fetch-resume', '../mocks/services/fetch-resume')
-  })
-
-  after(() => {
-    mock.stop('../../src/services/fetch-resume', '../mocks/services/fetch-resume')
-  })
-
   test
   .stdout()
   .command([

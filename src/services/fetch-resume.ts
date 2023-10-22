@@ -1,4 +1,3 @@
-import chalk from 'chalk'
 import {PaperFormat, launch} from 'puppeteer'
 
 import { CliFlags } from '../flags';
@@ -7,10 +6,11 @@ export async function fetchResume(cliFlags: CliFlags): Promise<string> {
   const {format, lastPage, path, scale, url} = cliFlags;
   const browser = await launch({
     args: ['--no-sandbox'],
+    headless: "new",
   })
   const page = await browser.newPage()
   await page.goto(url || 'https://sevic.dev/resume').catch(() => {
-    throw new Error(chalk.red('Url is not valid'))
+    throw new Error('Url is not valid')
   })
 
   await page.emulateMediaType('screen')
