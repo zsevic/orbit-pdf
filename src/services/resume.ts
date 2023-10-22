@@ -1,9 +1,9 @@
 import {PaperFormat, launch} from 'puppeteer'
 
-import { CliFlags } from '../flags';
+import {CliFlags} from '../flags'
 
 export async function fetchResume(cliFlags: CliFlags): Promise<string> {
-  const {format, lastPage, path, scale, url} = cliFlags;
+  const {format, lastPage, path, scale, url} = cliFlags
   const browser = await launch({
     args: ['--no-sandbox'],
     headless: 'new',

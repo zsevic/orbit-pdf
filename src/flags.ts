@@ -1,11 +1,11 @@
 export interface CliFlags {
-  format?: string;
+  format?: string
 
-  lastPage?: string;
+  lastPage?: string
 
-  path?: string;
+  path?: string
 
-  scale?: string;
+  scale?: string
 
-  url?: string;
+  url?: string
 }

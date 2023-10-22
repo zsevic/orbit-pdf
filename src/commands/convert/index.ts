@@ -42,7 +42,7 @@ export default class ConvertCommand extends Command {
   }
 
   validateFlags(cliFlags: CliFlags): void {
-    const {lastPage, scale, url} = cliFlags;
+    const {lastPage, scale, url} = cliFlags
     if (url && !validator.isURL(url)) {
       throw new Error('Url is not valid')
     }
