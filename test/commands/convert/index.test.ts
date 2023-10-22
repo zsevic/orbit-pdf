@@ -4,14 +4,8 @@ import * as sinon from 'sinon';
 import * as resumeService from '../../../src/services/resume';
 
 describe('Convert command', () => {
-  let stub: any;
-  before(() => {
-    stub = sinon.stub(resumeService, 'fetchResume').returns(Promise.resolve('Resume is successfully converted and downloaded'))
-  })
-
-  after(() => {
-    stub.restore()
-  })
+  const successMessage = 'Resume is successfully converted and downloaded';
+  sinon.stub(resumeService, 'fetchResume').returns(Promise.resolve(successMessage))
 
   test
   .stdout()
@@ -26,7 +20,7 @@ describe('Convert command', () => {
   ])
   .it('should convert and download resume when all arguments are valid', ctx => {
     expect(ctx.stdout).to.contain(
-      'Resume is successfully converted and downloaded',
+      successMessage,
     )
   })
 
@@ -35,7 +29,7 @@ describe('Convert command', () => {
   .command(['convert', '--url', 'https://sevic.dev/resume'])
   .it('should convert and download resume when valid url is provided', ctx => {
     expect(ctx.stdout).to.contain(
-      'Resume is successfully converted and downloaded',
+      successMessage,
     )
   })
 
@@ -44,7 +38,7 @@ describe('Convert command', () => {
   .command(['convert', '--lastPage', '2'])
   .it('should convert and download default resume when only last page argument is provided', ctx => {
     expect(ctx.stdout).to.contain(
-      'Resume is successfully converted and downloaded',
+      successMessage,
     )
   })
 
