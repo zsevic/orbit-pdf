@@ -2,6 +2,7 @@ import {Command, Flags} from '@oclif/core'
 import chalk from 'chalk'
 import validator from 'validator'
 
+import { CliFlags } from '../../flags'
 import {fetchResume} from '../../services/fetch-resume'
 
 export default class ConvertCommand extends Command {
@@ -41,8 +42,8 @@ export default class ConvertCommand extends Command {
     }
   }
 
-  validateFlags(params: Record<string, any>): void {
-    const {lastPage, scale, url} = params;
+  validateFlags(cliFlags: CliFlags): void {
+    const {lastPage, scale, url} = cliFlags;
     if (url && !validator.isURL(url)) {
       throw new Error('Url is not valid')
     }
@@ -51,7 +52,7 @@ export default class ConvertCommand extends Command {
       throw new Error('Last page is not valid')
     }
 
-    if ((scale && Number.isNaN(scale)) || (!Number.isNaN(scale) && scale <= 0)) {
+    if ((scale && Number.isNaN(scale)) || (!Number.isNaN(scale) && Number(scale) <= 0)) {
       throw new Error('Scale is not valid')
     }
   }

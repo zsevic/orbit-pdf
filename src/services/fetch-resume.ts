@@ -1,8 +1,10 @@
 import chalk from 'chalk'
-import {launch} from 'puppeteer'
+import {PaperFormat, launch} from 'puppeteer'
 
-export async function fetchResume(params: Record<string, any>): Promise<string> {
-  const {format, lastPage, path, scale, url} = params;
+import { CliFlags } from '../flags';
+
+export async function fetchResume(cliFlags: CliFlags): Promise<string> {
+  const {format, lastPage, path, scale, url} = cliFlags;
   const browser = await launch({
     args: ['--no-sandbox'],
   })
@@ -14,7 +16,7 @@ export async function fetchResume(params: Record<string, any>): Promise<string> 
   await page.emulateMediaType('screen')
 
   await page.pdf({
-    format: format || 'A3',
+    format: format as PaperFormat || 'A3',
     pageRanges: `1-${lastPage || 1}`,
     path: path || 'ZeljkoSevicCV.pdf',
     printBackground: true,
