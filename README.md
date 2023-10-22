@@ -15,20 +15,21 @@ CLI tool for converting [Orbit](https://github.com/sharu725/online-cv) HTML resu
 # Usage
 <!-- usage -->
 ```sh-session
-$ npx @zsevic/orbit-pdf COMMAND
+$ npm install -g @zsevic/orbit-pdf
+$ orbit-pdf COMMAND
 running command...
-$ npx @zsevic/orbit-pdf (-v|--version|version)
-@zsevic/orbit-pdf/1.1.5 linux-x64 node-v17.9.1
-$ npx @zsevic/orbit-pdf --help [COMMAND]
+$ orbit-pdf (--version)
+@zsevic/orbit-pdf/2.0.0 linux-x64 node-v20.6.0
+$ orbit-pdf --help [COMMAND]
 USAGE
-  $ npx @zsevic/orbit-pdf COMMAND
+  $ orbit-pdf COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`npx @zsevic/orbit-pdf convert`](#orbit-pdf-convert)
-* [`npx @zsevic/orbit-pdf help [COMMAND]`](#orbit-pdf-help-command)
+* [`orbit-pdf convert`](#orbit-pdf-convert)
+* [`orbit-pdf help [COMMANDS]`](#orbit-pdf-help-commands)
 
 ## `orbit-pdf convert`
 
@@ -36,34 +37,38 @@ Converts html resume to pdf
 
 ```
 USAGE
-  $ npx @zsevic/orbit-pdf convert
+  $ orbit-pdf convert [-f <value>] [-l <value>] [-p <value>] [-s <value>] [-u <value>]
 
-OPTIONS
-  -f, --format=format      format, example: A3
-  -l, --lastPage=lastPage  last page to print
-  -p, --path=path          path for downloaded pdf resume
-  -s, --scale=scale        scale, example: 1
-  -u, --url=url            html resume url
+FLAGS
+  -f, --format=<value>    format, example: A3
+  -l, --lastPage=<value>  last page to print
+  -p, --path=<value>      path for downloaded pdf resume
+  -s, --scale=<value>     scale, example: 1
+  -u, --url=<value>       html resume url
 
 DESCRIPTION
+  Converts html resume to pdf
   ...
   Converts html resume to pdf and downloads it
 ```
 
-## `orbit-pdf help [COMMAND]`
+## `orbit-pdf help [COMMANDS]`
 
-display help for @zsevic/orbit-pdf
+Display help for orbit-pdf.
 
 ```
 USAGE
-  $ npx @zsevic/orbit-pdf help [COMMAND]
+  $ orbit-pdf help [COMMANDS] [-n]
 
 ARGUMENTS
-  COMMAND  command to show help for
+  COMMANDS  Command to show help for.
 
-OPTIONS
-  --all  see all commands in CLI
+FLAGS
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for orbit-pdf.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.4/src/commands/help.ts)_
 <!-- commandsstop -->
