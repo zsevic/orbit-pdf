@@ -62,7 +62,8 @@
     ]
   },
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
+    "build": "npm run clean && tsc",
+    "clean": "shx rm -rf dist tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "prepack": "npm run build && oclif manifest && oclif readme",
