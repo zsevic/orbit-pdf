@@ -29,6 +29,7 @@
   "dependencies": {
     "@oclif/core": "^3.5.0",
     "@oclif/plugin-help": "^6.0.4",
+    "@oclif/plugin-plugins": "^3.9.3",
     "puppeteer": "^21.4.0",
     "validator": "^13.11.0"
   },
@@ -52,7 +53,8 @@
     "dirname": "orbit-pdf",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
     ]
   },
   "scripts": {
