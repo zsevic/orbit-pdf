@@ -19,7 +19,7 @@ $ npm install -g @zsevic/orbit-pdf
 $ orbit-pdf COMMAND
 running command...
 $ orbit-pdf (--version)
-@zsevic/orbit-pdf/2.0.4 linux-x64 node-v20.6.0
+@zsevic/orbit-pdf/2.0.5 linux-x64 node-v20.6.0
 $ orbit-pdf --help [COMMAND]
 USAGE
   $ orbit-pdf COMMAND
@@ -28,7 +28,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`orbit-pdf convert`](#orbit-pdf-convert)
 * [`orbit-pdf help [COMMANDS]`](#orbit-pdf-help-commands)
+
+## `orbit-pdf convert`
+
+Converts html resume to pdf
+
+```
+USAGE
+  $ orbit-pdf convert [-f <value>] [-l <value>] [-p <value>] [-s <value>] [-u <value>]
+
+FLAGS
+  -f, --format=<value>    format, example: A3
+  -l, --lastPage=<value>  last page to print
+  -p, --path=<value>      path for downloaded pdf resume
+  -s, --scale=<value>     scale, example: 1
+  -u, --url=<value>       html resume url
+
+DESCRIPTION
+  Converts html resume to pdf
+  ...
+  Converts html resume to pdf and downloads it
+```
 
 ## `orbit-pdf help [COMMANDS]`
 
