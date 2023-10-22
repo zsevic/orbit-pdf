@@ -71,7 +71,7 @@
     "publish-npm": "npm publish --access public --ignore-scripts --@zsevic:registry='https://registry.npmjs.org'",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "posttest": "npm run lint:fix",
-    "update-readme": "oclif readme && git add README.md",
+    "update-readme": "oclif readme && git add README.md && git commit -m \"Update Readme\"",
     "postversion": "npm run update-readme"
   }
 }
