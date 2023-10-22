@@ -1,8 +1,8 @@
 import {Command, Flags} from '@oclif/core'
 import validator from 'validator'
 
-import { CliFlags } from '../../flags'
-import {fetchResume} from '../../services/fetch-resume'
+import {CliFlags} from '../../flags'
+import {fetchResume} from '../../services/resume'
 
 export default class ConvertCommand extends Command {
   static description = `Converts html resume to pdf
@@ -47,7 +47,7 @@ export default class ConvertCommand extends Command {
       throw new Error('Url is not valid')
     }
 
-    if (lastPage && Number.isNaN(lastPage)) {
+    if (lastPage && Number.isNaN(Number(lastPage))) {
       throw new Error('Last page is not valid')
     }
 

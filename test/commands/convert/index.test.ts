@@ -1,6 +1,18 @@
 import {expect, test} from '@oclif/test'
+import * as sinon from 'sinon';
+
+import * as resumeService from '../../../src/services/resume';
 
 describe('Convert command', () => {
+  let stub: any;
+  before(() => {
+    stub = sinon.stub(resumeService, 'fetchResume').returns(Promise.resolve('Resume is successfully converted and downloaded'))
+  })
+
+  after(() => {
+    stub.restore()
+  })
+
   test
   .stdout()
   .command([
