@@ -5,7 +5,15 @@ import * as resumeService from '../../../src/services/resume';
 
 describe('Convert command', () => {
   const successMessage = 'Resume is successfully converted and downloaded';
-  sinon.stub(resumeService, 'fetchResume').returns(Promise.resolve(successMessage))
+  let stub: sinon.SinonStub;
+  
+  before(() => {
+    stub = sinon.stub(resumeService, 'fetchResume').returns(Promise.resolve(successMessage))
+  })
+
+  after(() => {
+    stub.restore();
+  })
 
   test
   .stdout()
