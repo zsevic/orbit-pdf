@@ -1,8 +1,9 @@
-const chalk = require('chalk')
-const puppeteer = require('puppeteer')
+import chalk from 'chalk'
+import {launch} from 'puppeteer'
 
-async function fetchResume({url, path, lastPage, format, scale}) {
-  const browser = await puppeteer.launch({
+export async function fetchResume(params: Record<string, any>): Promise<string> {
+  const {format, lastPage, path, scale, url} = params;
+  const browser = await launch({
     args: ['--no-sandbox'],
   })
   const page = await browser.newPage()
@@ -13,18 +14,14 @@ async function fetchResume({url, path, lastPage, format, scale}) {
   await page.emulateMediaType('screen')
 
   await page.pdf({
-    path: path || 'ZeljkoSevicCV.pdf',
     format: format || 'A3',
-    scale: scale ? Number.parseFloat(scale) : 1,
     pageRanges: `1-${lastPage || 1}`,
+    path: path || 'ZeljkoSevicCV.pdf',
     printBackground: true,
+    scale: scale ? Number.parseFloat(scale) : 1,
   })
 
   await browser.close()
 
   return 'Resume is successfully converted and downloaded'
-}
-
-module.exports = {
-  fetchResume,
 }

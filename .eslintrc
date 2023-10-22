@@ -2,5 +2,5 @@
   "env": {
     "mocha": true
   },
-  "extends": "oclif"
+  "extends": ["oclif", "oclif-typescript", "prettier"]
 }
