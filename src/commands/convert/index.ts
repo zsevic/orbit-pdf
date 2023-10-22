@@ -37,7 +37,7 @@ export default class ConvertCommand extends Command {
       const result = await fetchResume(flags)
       this.log(chalk.green(result))
     } catch (error) {
-      this.log(chalk.red(error.message))
+      this.log(chalk.red(error instanceof Error ? error.message : `Unexpected error ${error}`))
     }
   }
 
