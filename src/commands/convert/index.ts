@@ -51,7 +51,7 @@ export default class ConvertCommand extends Command {
       throw new Error('Last page is not valid')
     }
 
-    if ((scale && Number.isNaN(scale)) || (!Number.isNaN(scale) && Number(scale) <= 0)) {
+    if ((scale && Number.isNaN(Number(scale))) || (!Number.isNaN(Number(scale)) && Number(scale) <= 0)) {
       throw new Error('Scale is not valid')
     }
   }
